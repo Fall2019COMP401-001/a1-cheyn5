@@ -70,7 +70,7 @@ public class A1Adept {
 	}
 	System.out.println("Biggest:" + " " + MaxName);
 	System.out.println("Smallest:" + " " + MinName);
-	System.out.println("Average:" + " "+ String.format("%.2f", sum/3));	
+	System.out.println("Average:" + " "+ String.format("%.2f", sum/itemcount));	
 		}
 	}
 
