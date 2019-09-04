@@ -51,9 +51,10 @@ public class A1Jedi {
 					}	
 				}
 				
-				for(int j = 0; j<count; j++) {
-					itemSeen[j] = false;
-				}
+				
+			}
+			for(int j = 0; j<count; j++) {
+				itemSeen[j] = false;
 			}
 		
 			
