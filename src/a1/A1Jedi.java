@@ -61,9 +61,10 @@ public class A1Jedi {
 		for (int i = 0; i < NumCustomers.length ; i++) {
 			String No = NumCustomers[i] + "";
 			if (NumCustomers[i] == 0) {
-				No = "No";
+				System.out.println("No" +  " " + "customers bought " + itemName[i]);
+			} else {
+				System.out.println(No +  " customers bought " + quantityItem[i] + " " + itemName[i]);
 			}
-			System.out.println(No +  " " + "customers bought" + " " + quantityItem[i] + " " + itemName[i]);
 		}
 	}
 				
