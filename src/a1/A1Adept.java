@@ -11,9 +11,11 @@ public class A1Adept {
 		// Your code follows here.
 		int itemcount = scan.nextInt();
 		
+		//creating variables for a string for item name and for how much every item will cost
 		String[] itemName = new String[itemcount];
 		double[] itemCost = new double[itemcount];
-				
+		
+		
 		for (int i = 0; i < itemcount; i++) {
 			itemName[i] = scan.next();
 			itemCost[i] = scan.nextDouble();
@@ -71,6 +73,8 @@ public class A1Adept {
 	System.out.println("Biggest:" + " " + MaxName);
 	System.out.println("Smallest:" + " " + MinName);
 	System.out.println("Average:" + " "+ String.format("%.2f", sum/customercount));	
+	scan.close();
 		}
+	
 	}
 

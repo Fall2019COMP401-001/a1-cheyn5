@@ -37,9 +37,10 @@ public class A1Novice {
 		for (int i = 0; i<count; i++) {
 			System.out.println(firstInitial[i] + ". " + lastName[i] + ": " + String.format("%.2f", cost[i]));
 			
+			
 		}
 		
-		
+		scan.close();
 		
 		
 		

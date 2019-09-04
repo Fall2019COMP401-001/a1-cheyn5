@@ -13,17 +13,21 @@ public class A1Jedi {
 		// Your code follows here.
 		int count = scan.nextInt();
 		String[] itemName = new String[count];
- 		int[] numCustomers = new int[count];
 		int[] numitem = new int[count];
-				
+		boolean[] itemSeen = new boolean[count];
+		
 		for (int i = 0; i < count; i++) {
 			itemName[i] = scan.next();
+			itemSeen[i] = false;
 			scan.nextDouble();
 		}
 		
-		int temp = 0;
-		int customerCount = scan.nextInt();
-		for (int i = 0; i < customerCount; i++) {
+		int count2 = scan.nextInt();
+		int[] NumCustomers = new int[count];
+		int[] quantityItem = new int[count];
+		
+		
+		for (int i = 0; i < count2; i++) {
 			scan.next();
 			scan.next();
 			int numitemsPurchased = scan.nextInt();
@@ -31,23 +35,35 @@ public class A1Jedi {
 				int quantity = scan.nextInt();
 				String foodname = scan.next();
 				for (int a = 0; a < numitem.length; a++ ) {
-					if (foodname == itemName[i]) {
-						numitem[a] += quantity;
-						numCustomers[a]++;
-					}
-					else {
-						//itemName[temp] = foodname ;
-						//numitem[temp] = quantity;
-						//numCustomers[temp]++;
-						//temp++;
+					int temp = 0;
+					if (foodname.equals(itemName[a])) {
+						quantityItem[a] += quantity;
+						
+						if (itemSeen[a] == false) {
+							NumCustomers[a]++;
+							itemSeen[a] = true;
+						}
+					}else {
+						/*itemName[temp] = foodname ;
+						quantityItem[temp] = quantity;
+						NumCustomers[temp]++;
+						temp++;*/
 					}	
+				}
+				
+				for(int j = 0; j<count; j++) {
+					itemSeen[j] = false;
 				}
 			}
 		
 			
 		}
-		for (int i = 0; i < numCustomers.length ; i++) {
-			System.out.println(numCustomers[i] + " " + "customers bought" + " " + numitem[i] + " " + itemName[i]);
+		for (int i = 0; i < NumCustomers.length ; i++) {
+			String No = NumCustomers[i] + "";
+			if (NumCustomers[i] == 0) {
+				No = "No";
+			}
+			System.out.println(No +  " " + "customers bought" + " " + quantityItem[i] + " " + itemName[i]);
 		}
 	}
 				
